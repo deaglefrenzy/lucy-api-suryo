@@ -52,3 +52,5 @@ go.work*
 app/cmd/
 
 lucy-control-panel/
+
+conf/mongo/mongo-keyfile
