@@ -8,7 +8,7 @@ services:
     container_name: lucy-app
     restart: always
     ports:
-      - "9000:9000"
+      - "${APP_PORT}:${APP_PORT}"
     volumes:
       - ./app:/go/src/app
     depends_on:
@@ -28,7 +28,7 @@ services:
     container_name: lucy-nginx
     restart: always
     ports:
-      - "8000:8000"
+      - "${APP_NGINX}:${APP_NGINX}"
     volumes:
       - ./control-panel:/var/www/html
       - ./conf/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
